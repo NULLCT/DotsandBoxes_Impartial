@@ -6,6 +6,7 @@
 #include <string>
 #include <ctime>
 #include <vector>
+#include "stldatadumper.hpp"
 
 using namespace std;
 
@@ -18,7 +19,6 @@ typedef pair<int, int> pint;
 #define rep(i, n) for (int i = 0; i < n; i++)
 #define drep(i, n) for (int i = (n)-1; 0 <= i; i--)
 #define all(a) a.begin(), a.end()
-
 //縦x横
 int N, M;
 
@@ -78,7 +78,7 @@ void Support() {
     fstream fs(fName);
     if (!fs) {
       cout << "ファイルが開けませんでした" << endl;
-      return;
+      assert(false);
     }
 
     drep(Game, 1 << (N * (M + 1) + (N + 1) * M)) {
