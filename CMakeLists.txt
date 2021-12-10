@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.1)
 
-project(dotsandboxes CXX)
+project(dotsandboxes)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(main
   ./src/main.cpp
